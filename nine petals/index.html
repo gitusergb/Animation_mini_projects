@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nine petals</title>
+    <style>
+       HTML, BODY {
+	 height: 90%;
+	 overflow: hidden;
+}
+ BODY {
+	 background: #0a0a0a;
+	 background-image: linear-gradient(#0f0f0f 1px, transparent 1px), linear-gradient(to right, #2a2a2a 1px, transparent 1px);
+	 background-size: 3.3333333333vmin 3.3333333333vmin;
+}
+ .wrapper {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 margin: auto;
+	 width: 10vmin;
+	 height: 10vmin;
+	 font-size: 10vmin;
+	 transform: rotateX(-45deg);
+	 transform-style: preserve-3d;
+     /* border: 2px solid gray; */
+     margin-top: 200px;
+}
+ .flower {
+	 width: 10vmin;
+	 height: 10vmin;
+	 animation: rotate-flower 10s linear infinite;
+	 transform-style: preserve-3d;
+     /* border: 2px solid yellow; */
+     margin-top: 200px;
+}
+ .flower:before {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 width: 80%;
+	 height: 80%;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+	 margin: auto;
+     /* margin:10px; */
+	 /* background: #260; */
+     /* gb */
+     background: rgb(102, 0, 66);
+	 border-radius: 50%;
+	 transform: rotateX(90deg);
+	 animation: rotate-hue 5s infinite;
+}
+ .petal {
+	 position: absolute;
+	 z-index: 20;
+	 bottom: 80%;
+	 left: -10vmin;
+	 transform-style: preserve-3d;
+	 transform-origin: bottom;
+}
+ .box {
+	 width: 30vmin;
+	 transform-style: preserve-3d;
+	 transform-origin: bottom;
+	 animation: rotate-box 12s infinite;
+}
+ .shape {
+	 width: 0.5em;
+	 height: 0.4em;
+	 margin: auto;
+	 background: currentColor;
+	 box-shadow: 0.5em 0 0 0, 1em 0 0 0, -1em 0 0 0, -0.5em 0 0 0;
+	 border-radius: 50%;
+	 animation: rotate-hue 5s infinite;
+}
+ @keyframes rotate-box {
+	 0% {
+		 transform: rotateX(3.5deg);
+	}
+	 15% {
+		 transform: rotateX(3.5deg);
+	}
+	 50% {
+		 transform: rotateX(-7deg);
+	}
+	 80% {
+		 transform: rotateX(-7deg);
+	}
+	 100% {
+		 transform: rotateX(3.5deg);
+	}
+}
+ @keyframes rotate-flower {
+	 100% {
+		 transform: rotateY(360deg);
+	}
+}
+ @keyframes rotate-hue {
+	 100% {
+		 filter: hue-rotate(360deg);
+	}
+}
+  
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flower"></div>
+    </div>
+</body>
+<script>
+    console.clear();
+
+var doc = document;
+var flower = doc.querySelector('.flower');
+
+
+var petalPartMarkup = '<div class="box"> \
+                    <div class="shape"></div> \
+                </div>';
+
+var maxParts = 20;
+var maxPetalsDef = 9;
+var maxPetals = maxPetalsDef;
+
+var partsFontStepDef = 25 / maxParts;
+var partsFontStep = partsFontStepDef;
+var huetStep = 150 / maxParts;
+
+createFlower ();
+
+function createFlower () {
+    
+        var angle = 360 / maxPetals;
+    
+    for (var i = 0; i < maxPetals; i++) {
+        var petal = createPetal(); 
+        var currAngle = angle * i + 'deg';
+        var transform = 'transform: rotateY(' + currAngle + ') rotateX(-30deg) translateZ(9vmin)';
+        
+        petal.setAttribute( 'style',transform);
+        
+        flower.appendChild( petal );
+    }
+}
+
+function createPetal () {
+    
+    var box = createBox ( null, 0);
+    
+    var petal = doc.createElement('div');
+    petal.classList.add('petal');
+    
+    for (var i = 1; i <= maxParts; i++) {
+        newBox = createBox ( box, i );        
+        box = newBox;
+    } 
+    
+    petal.appendChild( box );
+
+    return petal;
+}
+
+function createBox ( box, pos ) {
+    
+    var fontSize = partsFontStep * ( maxParts - pos ) + 'vmin';
+    var half = maxParts / 2;
+    
+    var bright = '50';
+    
+    if ( pos < half + 1 ) {
+        fontSize = partsFontStep * pos + 'vmin';
+    }
+    else {
+        bright = 10 + 40 / half * ( maxParts - pos );
+    }
+    
+    var color = 'hsl(' + huetStep * pos + ', 100%, ' + bright + '%)';
+    
+    // 1. Add shape
+    var newShape = doc.createElement('div');
+    newShape.classList.add( 'shape' );
+
+    // 2. Create wrapper .box
+    var newBox = doc.createElement('div');
+    newBox.classList.add('box');  
+    
+    var boxStyle = [
+        'color: ' + color,
+        'font-size: ' + fontSize
+    ].join(';');
+    newBox.setAttribute('style', boxStyle);
+
+    // 3. Add old box to new box
+    if ( box ) {
+        newBox.appendChild( box );
+    }
+    
+    // 4. Add shape to new box
+    newBox.appendChild( newShape );
+
+    
+    return newBox;
+}
+
+function out ( content ) {
+    console.log( content );
+}
+</script>
+</html>

@@ -1,0 +1,73 @@
+$colors-list:  #ed0331 #8bbbc9 #3C144F  #9C2542 #28a745;
+$p_size: 6em;
+$bg: #F8DE7E;
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@mixin petals($flower-size, $petal-size) {  
+  position: relative;
+  width:  $flower-size;
+  height: $flower-size;
+  border-radius: 50%;
+  padding: 0; 
+  
+  > * {
+    display: block;
+    position: absolute;
+    top:  50%; 
+    left: 50%;
+    margin: -($petal-size / 2);
+    width:  $petal-size;
+    height: $petal-size;
+    border-radius: 50%;
+  
+    $angle: (360 / 5);
+    $rot: 0;
+
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg) translate($flower-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+
+    @each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    &:nth-of-type(#{$i})  { 
+        background-color: $current-color;
+    	}
+	}
+  }
+}
+ body {
+background-color: $bg;
+ }
+
+.flower {
+  @include petals($flower-size: 9em, $petal-size:$p_size); 
+  -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+ }
+
+
+.flower_box {
+	width:9em;
+	margin:150px auto;
+}
+
+#pistil {
+	position:relative;
+	width: $p_size;
+	height: $p_size;
+	background-color: #FFFFFF;
+	border-radius: 50%;
+	top:-115px;
+	left:25px;
+}
+
+
+
