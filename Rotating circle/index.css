@@ -1,0 +1,89 @@
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+   }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+   }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+   }
+}
+body {
+    background-color: #27373f;
+}
+.flower {
+    position: relative;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    padding: 0;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+.flower > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5em;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+}
+.flower > *:nth-of-type(1) {
+    transform: rotate(0deg) translate(10em) rotate(0deg);
+}
+.flower > *:nth-of-type(2) {
+    transform: rotate(60deg) translate(10em) rotate(-60deg);
+}
+.flower > *:nth-of-type(3) {
+    transform: rotate(120deg) translate(10em) rotate(-120deg);
+}  /* gb */
+.flower > *:nth-of-type(4) {
+    transform: rotate(180deg) translate(10em) rotate(-180deg);
+}
+.flower > *:nth-of-type(5) {
+    transform: rotate(240deg) translate(10em) rotate(-240deg);
+}
+.flower > *:nth-of-type(6) {
+    transform: rotate(300deg) translate(10em) rotate(-300deg);
+}
+.flower > *:nth-of-type(1) {
+    background-color: #bfe4fa;
+}
+.flower > *:nth-of-type(2) {
+    background-color: #ffd54e;
+}
+.flower > *:nth-of-type(3) {
+    background-color: #f3dda3;
+}
+.flower > *:nth-of-type(4) {
+    background-color: #65d9ee;
+}
+.flower > *:nth-of-type(5) {
+    background-color: #dbdbdb;
+}
+.flower > *:nth-of-type(6) {
+    background-color: #de6fa1;
+}
+.flower_box {
+    width: 10em;
+
+    margin: 300px auto 200px auto;
+}
+#pistil {
+    position: relative;
+    width: 10em;
+    height: 10em;
+    background-color: #fff f;
+    border-radius: 50%;
+    top: -160px;
+    left: -3px;
+}

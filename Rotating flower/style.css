@@ -1,0 +1,118 @@
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+   }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+   }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+   }
+}
+body {
+    background-color: #272317;
+}
+.flower {
+    position: relative;
+    width: 9em;
+    height: 9em;
+    border-radius: 50%;
+    padding: 0;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+.flower > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -3em;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+}
+.flower > *:nth-of-type(1) {
+    transform: rotate(0deg) translate(4.5em) rotate(0deg);
+}
+.flower > *:nth-of-type(2) {
+    transform: rotate(72deg) translate(4.5em) rotate(-72deg);
+}
+.flower > *:nth-of-type(3) {
+    transform: rotate(144deg) translate(4.5em) rotate(-144deg);
+}
+.flower > *:nth-of-type(4) {
+    transform: rotate(216deg) translate(4.5em) rotate(-216deg);
+}
+.flower > *:nth-of-type(5) {
+    transform: rotate(288deg) translate(4.5em) rotate(-288deg);
+}
+.flower > *:nth-of-type(1) {
+    background-color: #ed0331;
+}
+.flower > *:nth-of-type(2) {
+    background-color: #8bbbc9;
+}
+.flower > *:nth-of-type(3) {
+    background-color: #3c144f;
+}
+.flower > *:nth-of-type(4) {
+    background-color: #9c2542;
+}
+.flower > *:nth-of-type(5) {
+    background-color: #28a745;
+}
+.flower_box {
+    width: 9em;
+    margin: 45px auto;
+}
+#pistil {
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -115px;
+    left: 25px;
+}
+#cristal{
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -115px;
+    left: 25px;
+}
+
+
+/* ///////////////////////////////////////////// */
+
+.aadve{
+display: flex;
+}
+
+
+#pistil2{
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -115px;
+    left: 25px;
+}
+#cristal2{
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -115px;
+    left: 25px;
+}
