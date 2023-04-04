@@ -20,9 +20,9 @@
 
   <hr />
 
- <div class="show" style="width:auto; border: 1px solid gray; ">
 
-<table style=" justify-content: center;margin: 10px;border-collapse: collapse;text-align: center;font-size: 20px; width :99%">
+
+<table style=" justify-content: center;margin: 10px;border-collapse: collapse;text-align: center;font-size: 20px;">
 <caption>Animations : Just For Fun</caption>
         <tbody> 
             <tr>
@@ -67,7 +67,7 @@
        
 </tbody></table>
 
-</div>
+
 
 
 
