@@ -21,7 +21,7 @@
   <hr />
 
 
-
+<!--
 <table style=" justify-content: center;margin: 10px;border-collapse: collapse;text-align: center;font-size: 20px;">
 <caption>Animations : Just For Fun</caption>
         <tbody> 
@@ -65,7 +65,7 @@
 </tr>
           
        
-</tbody></table>
+</tbody></table>-->
 
 
 
