@@ -43,78 +43,79 @@ background: radial-gradient(circle, rgba(93,147,232,0.6474964985994398) 21%, rgb
     
     </canvas>
 
-    
-    <script>
 
-      const canvas = document.getElementById('snowfall');
-      const ctx = canvas.getContext('2d');
-      
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      
-      
-      const audio = document.getElementById("myAudio");
-            
-          
-            // Play the audio when canvas is clicked and stop when double clicked 
-            canvas.addEventListener("click", function() {
-              audio.play();
-            });
-
-            canvas.addEventListener("dblclick", function() {
-              audio.pause();
-            });
-      
-      let snowflakes = [];
-      
-      function Snowflake() {
-        this.x = Math.random() * canvas.width;
-        this.y = -50;
-        this.radius = Math.random() * 5 + 1;
-        this.speed = Math.random() * 5 + 1;
-        this.wind = (Math.random() - 0.5) * 0.5;
-      }
-      
-      Snowflake.prototype.update = function() {
-        this.x += this.wind;
-        this.y += this.speed;
-        if (this.y > canvas.height) {
-          this.y = -50;
-          this.x = Math.random() * canvas.width;
-        }
-      }
-      
-      Snowflake.prototype.draw = function() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "white";
-        ctx.fill();
-      }
-      
-      function createSnowflakes() {
-        for (let i = 0; i < 300; i++) {
-          snowflakes.push(new Snowflake());
-        }
-      }
-      
-      function animate() {
-        requestAnimationFrame(animate);
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let i = 0; i < snowflakes.length; i++) {
-          snowflakes[i].update();
-          snowflakes[i].draw();
-        }
-      }
-      
-      createSnowflakes();
-      animate();
-      
-      
-      
-      
-      
-      </script>
-   
     
 </body>
+
+<script>
+
+  const canvas = document.getElementById('snowfall');
+  const ctx = canvas.getContext('2d');
+  
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  
+  
+  const audio = document.getElementById("myAudio");
+        
+      
+        // Play the audio when canvas is clicked and stop when double clicked 
+        canvas.addEventListener("click", function() {
+          audio.play();
+        });
+
+        canvas.addEventListener("dblclick", function() {
+          audio.pause();
+        });
+  
+  let snowflakes = [];
+  
+  function Snowflake() {
+    this.x = Math.random() * canvas.width;
+    this.y = -50;
+    this.radius = Math.random() * 5 + 1;
+    this.speed = Math.random() * 5 + 1;
+    this.wind = (Math.random() - 0.5) * 0.5;
+  }
+  
+  Snowflake.prototype.update = function() {
+    this.x += this.wind;
+    this.y += this.speed;
+    if (this.y > canvas.height) {
+      this.y = -50;
+      this.x = Math.random() * canvas.width;
+    }
+  }
+  
+  Snowflake.prototype.draw = function() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = "white";
+    ctx.fill();
+  }
+  
+  function createSnowflakes() {
+    for (let i = 0; i < 300; i++) {
+      snowflakes.push(new Snowflake());
+    }
+  }
+  
+  function animate() {
+    requestAnimationFrame(animate);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < snowflakes.length; i++) {
+      snowflakes[i].update();
+      snowflakes[i].draw();
+    }
+  }
+  
+  createSnowflakes();
+  animate();
+  
+  
+  
+  
+  
+  </script>
+
 </html>
