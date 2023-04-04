@@ -27,39 +27,39 @@
         <tbody> 
             <tr>
                 <td><a href="https://keen-malasada-0e084a.netlify.app/" target="_blank"><h3>Flower</h3></a>
-                    <img src="../images/flower.png" style="width: 90%;height: 400px;" target="_blank">
+                    <img src="./images/flower.png" style="width: 90%;height: 200px;" target="_blank">
                 </td>
                <td>
                     <a href="https://dynamic-froyo-044e9b.netlify.app/" target="_blank"><h3>Butterflies</h3></a>
-                    <img style="width: 90%;height: 400px;" src="../images/butterfly.png" target="_blank"></img>
+                    <img style="width: 90%;height: 200px;" src="./images/butterfly.png" target="_blank"></img>
                </td>
            
 <td><a href="https://tranquil-caramel-0aa49d.netlify.app/" target="_blank"><h3>Nine_Petals</h3></a>
-     <img style="width: 90%;height: 400px;" src="../images/9petals.png" target="_blank"></img>
+     <img style="width: 90%;height: 200px;" src="./images/9petals.png" target="_blank"></img>
                </td>
             </tr>
             <tr>
                 <td><a href="https://resplendent-sunflower-e81b47.netlify.app/" target="_blank"><h3>Code Rain</h3></a>
-                     <img style="width: 90%;height: 400px;" src="../images/code rain.png" target="_blank"></img>
+                     <img style="width: 90%;height: 200px;" src="./images/code rain.png" target="_blank"></img>
                 </td>
                 <td>
                      <a href="https://spiffy-meringue-a7c3af.netlify.app/" target="_blank"><h3>star Rain</h3></a>
-                     <img style="width: 90%;height: 400px;" src="../images/star rain.png" target="_blank"></img>
+                     <img style="width: 90%;height: 200px;" src="./images/star rain.png" target="_blank"></img>
                 </td>
                 <td>
                     <a href="https://inquisitive-semifreddo-f314df.netlify.app/" target="_blank"><h3>Snow Fall</h3></a>
-                     <img style="width: 90%;height: 400px;" src="../images/snow.png" target="_blank"></img>
+                     <img style="width: 90%;height: 200px;" src="./images/snow.png" target="_blank"></img>
                 </td>
                 </tr>
            <tr>
                <td><a href="https://thunderous-hotteok-28f4bd.netlify.app/" target="_blank"><h3>Rotating Circle</h3></a>
-                    <img style="width: 90%;height: 400px;" src="../images/circles.png" target="_blank"></img>
+                    <img style="width: 90%;height: 200px;" src="./images/circles.png" target="_blank"></img>
                </td>
            <td><a href="https://cosmic-lily-fe96b7.netlify.app/" target="_blank"><h3>Rotating Flower</h3></a>
-                <img style="width: 90%;height: 400px;" src="../images/flowers rot.png" target="_blank"></img>
+                <img style="width: 90%;height: 200px;" src="./images/flowers rot.png" target="_blank"></img>
            </td>
            <td><a href="https://dapper-choux-bf8d2d.netlify.app/" target="_blank"><h3>Name</h3></a>
-                <img style="width: 90%;height: 400px;" src="../images/name.png" target="_blank"></img>
+                <img style="width: 90%;height: 200px;" src="./images/name.png" target="_blank"></img>
            </td>
            
 </tr>
@@ -68,6 +68,9 @@
 </tbody></table>
 
 </div>
+
+
+
 
   <!-- <div style="display: grid; justify-content: center;align-items: center; grid-template-columns:repeat(3,1fr) ;grid-template-rows:repeat(2,1fr);">
 	<a href="https://dynamic-froyo-044e9b.netlify.app/"><img src="" alt=""><br><span>Butterflies</span></a>
