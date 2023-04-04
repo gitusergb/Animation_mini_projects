@@ -2,7 +2,7 @@
 
 ---
 
-<p> some animation stuff using HTML and CSS and JS</P>
+<p> Some animation stuff using HTML and CSS and JS</P>
 
 ---
 
