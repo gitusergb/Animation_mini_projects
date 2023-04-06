@@ -17,6 +17,8 @@
 	<a href="https://spiffy-meringue-a7c3af.netlify.app/" target="_blank"><li>star Rain</li></a>
 	<a href="https://inquisitive-semifreddo-f314df.netlify.app/" target="_blank"><li>Snow Fall</li></a>
      <a href="https://gbs-digital-clock.netlify.app/" target="_blank"><li>My Digital Clock</li></a>
+     <a href="https://gbs-digital-clock.netlify.app/" target="_blank"><li>Singing Digital Clock</li></a>
+     
   </ol>
 
   <hr />

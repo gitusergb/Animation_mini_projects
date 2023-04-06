@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Digital Clock practice with glowing effect |GB </title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins',sans-serif;
+       }
+       html,body{
+        display:grid;
+        height : 100%;
+        place-items:initial;
+        background-color: #000;
+       }
+      
+
+        /* gb */
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+/* Main styles */
+ .text {
+	 fill: none;
+	 stroke-width: 3;
+	 stroke-linejoin: round;
+	 stroke-dasharray: 70 330;
+	 stroke-dashoffset: 0;
+	 -webkit-animation: stroke 6s infinite linear;
+	 animation: stroke 6s infinite linear;
+}
+ .text:nth-child(5n + 1) {
+	 stroke: #f2385a;
+	 -webkit-animation-delay: -1.2s;
+	 animation-delay: -1.2s;
+}
+ .text:nth-child(5n + 2) {
+	 stroke: #f5a503;
+	 -webkit-animation-delay: -2.4s;
+	 animation-delay: -2.4s;
+}
+ .text:nth-child(5n + 3) {
+	 stroke: #e9f1df;
+	 -webkit-animation-delay: -3.6s;
+	 animation-delay: -3.6s;
+}
+ .text:nth-child(5n + 4) {
+	 stroke: #56d9cd;
+	 -webkit-animation-delay: -4.8s;
+	 animation-delay: -4.8s;
+}
+ .text:nth-child(5n + 5) {
+	 stroke: #3aa1bf;
+	 -webkit-animation-delay: -6s;
+	 animation-delay: -6s;
+}
+ @-webkit-keyframes stroke {
+	 100% {
+		 stroke-dashoffset: -400;
+	}
+}
+ @keyframes stroke {
+	 100% {
+		 stroke-dashoffset: -400;
+	}
+}
+/* Other styles */
+
+ #b {
+	 /* background: #7b0808; */
+	 background-size: 0.2em 100%;
+	 font: 5em Open Sans, Impact;
+	 text-transform: uppercase;
+	 margin: 100px 0px 0px 100px;
+     /* border: 1px solid yellow; */
+}
+ svg {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+}
+ 
+    </style>
+</head>
+<body>
+    
+
+    <div id="b" >
+    <svg >
+    <!-- <svg viewbox="0 0 800 300" > -->
+        <!-- Symbol-->
+        <symbol id="s-text">
+          <text text-anchor="start" x="10%" y="5%" dy=".40em">Gauri Ashok Bidwai</text>
+        </symbol>
+        <!-- Duplicate symbols-->
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+        <use class="text" xlink:href="#s-text"></use>
+       
+      </svg>
+    </div>
+</body>
+
+</html>
+
