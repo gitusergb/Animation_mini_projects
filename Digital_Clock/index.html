@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>Digital Clock practice with glowing effect |GB </title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins',sans-serif;
+       }
+       html,body{
+        display:grid;
+        height : 100%;
+        place-items: center;
+        background-color: #000;
+       }
+       .Wrapper{
+        height: 100px ;
+        width: 360px;
+        cursor: default;
+        /* background: red; */
+        background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+        border-radius: 10px;
+        animation: animate 1.5s linear infinite;
+       }
+       .Wrapper .display, .Wrapper span{
+      
+            position:absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+    
+        }
+       .Wrapper .display{
+            /* opacity: 0; */
+            z-index: 999;
+            /* background: blue; */
+            /* background: #1f1f1f; */
+            background: #1b1b1b; 
+            height: 85px;
+            width:345px;
+            border-radius: 6px;
+            text-align: center;
+       }
+       .Wrapper .display #time{
+        line-height: 85px;
+        /* color: #fff; */
+        font-size: 50px;
+        font-weight: 600;
+        letter-spacing: 1px;
+         /* gaurib */
+        background: linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+        background-clip:inherit;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+        animation: animate 1.5s linear infinite;
+    }
+    @keyframes animate{
+        100%{
+            filter: hue-rotate(360deg);
+        }
+    }
+        .Wrapper span{
+           height:100%;
+            width:100%;
+            background: inherit;
+            border-radius: 10px;
+        }
+        .Wrapper span:first-child{
+            filter: blur(10px);
+        }
+        .Wrapper span:last-child{
+            filter: blur(20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="Wrapper">
+        <div class="display">
+            <div id="time"></div>
+        </div>
+       <span></span>
+       <span></span>
+    </div>
+</body>
+<script>
+setInterval(()=> {
+    const time = document.getElementById("time");
+
+let date = new Date();
+let hours = date.getHours();
+let minutes = date.getMinutes();
+let seconds = date.getSeconds();
+let day_night ="AM";
+if(hours>12){
+    day_night ="PM";
+    hours=hours-12;   
+}
+if(hours<10){
+    hours="0"+hours;   
+}
+if(minutes<10){
+    minutes="0"+minutes;   
+}
+if(seconds<10){
+    seconds="0"+seconds;   
+}
+time.textContent= hours+":"+minutes+":"+seconds + "  "+day_night ;
+
+});
+</script>
+</html>
+
