@@ -30,26 +30,26 @@
 
 
 
- <!-- <div class="show" style="width:auto; border: 1px solid gray; ">
+<div class="show" style="width:auto; border: 1px solid gray; ">
 
 <table style=" justify-content: center;margin: 10px;border-collapse: collapse;text-align: center;font-size: 20px; width :99%">
 <caption>Animations : Just For Fun</caption>
  <tbody> 
-<tr>
+<!--<tr>
 <td><a href="https://keen-malasada-0e084a.netlify.app/" target="_blank"><h3>Flower</h3></a>
 <img src="../images/flower.png" style="width: 90%;height: 200px;" target="_blank">
 </td>
 <td>
 <a href="https://dynamic-froyo-044e9b.netlify.app/" target="_blank"><h3>Butterflies</h3></a>
 <img style="width: 90%;height: 200px;" src="../images/butterfly.png" target="_blank"></img>
-</td>
-           
+</td>      
 <td><a href="https://tranquil-caramel-0aa49d.netlify.app/" target="_blank"><h3>Nine_Petals</h3></a>
      <img style="width: 90%;height: 200px;" src="../images/9petals.png" target="_blank"></img>
 </td>
-</tr>
+</tr>-->
  <tr>
-<td><a href="https://resplendent-sunflower-e81b47.netlify.app/" target="_blank"><h3>Code Rain</h3></a>
+<td>
+	<a href="https://resplendent-sunflower-e81b47.netlify.app/" target="_blank"><h3>Code Rain</h3></a>
                      <img style="width: 90%;height: 200px;" src="./images/code rain.png" target="_blank"></img>
                 </td>
                 <td>
@@ -59,7 +59,7 @@
                 <td>
                     <a href="https://inquisitive-semifreddo-f314df.netlify.app/" target="_blank"><h3>Snow Fall</h3></a>
                      <img style="width: 90%;height: 200px;" src="./images/snow.png" target="_blank"></img>
-                </td>
+                </td>-->
                 </tr>
            <tr>
                <td><a href="https://thunderous-hotteok-28f4bd.netlify.app/" target="_blank"><h3>Rotating Circle</h3></a>
@@ -75,7 +75,7 @@
 </tbody>
 </table>
 
-</div> -->
+</div> 
 
   <!-- <div style="display: grid; justify-content: center;align-items: center; grid-template-columns:repeat(3,1fr) ;grid-template-rows:repeat(2,1fr);">
 	<a href="https://dynamic-froyo-044e9b.netlify.app/"><img src="" alt=""><br><span>Butterflies</span></a>
