@@ -1,8 +1,12 @@
-<h1> Animations : Just for fun </h1>
+# Animations : Just for fun 
 
 ---
 
-<h4> Some Animation Stuff Using HTML and CSS and JS</h4>
+## Some Animation Stuff Using HTML and CSS and JS
+
+### about : 
+'Dive into a world of whimsy with these mini projects, where creativity meets coding. 
+From fluttering butterflies to a Singing Digital Clock, experience the magic of animation using HTML, CSS, and JS ,React'
 
 ---
 
